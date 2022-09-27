@@ -6,6 +6,8 @@ namespace logic_gates{
     bool or_gate(bool, bool);
     bool and_not_gate(bool, bool);
     bool or_not_gate(bool, bool);
+    bool exclusive_or_gate(bool, bool);
+
     bool inverter(bool);
 }
 

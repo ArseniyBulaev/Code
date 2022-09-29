@@ -15,8 +15,13 @@ int main(){
     // tests::two_inputs_gate_test("And-not", &logic_gates::and_not_gate);
     // tests::two_inputs_gate_test("Or-not", &logic_gates::or_not_gate);
     // tests::one_input_gate_test("Inverter", &logic_gates::inverter);
-    tests::two_inputs_gate_test("Exclusive or", &logic_gates::exclusive_or_gate);
-    
+
+    // tests::two_inputs_gate_test("Exclusive or", &logic_gates::exclusive_or_gate);
+
+    tests::sum_test(true, true);
+    tests::sum_test(true, false);
+    tests::sum_test(false, true);
+    tests::sum_test(false, false);
 
     return 0;
 }

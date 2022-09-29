@@ -1,4 +1,17 @@
+#include <string>
+#include <iostream>
+
+
 #include "tests.h"
+#include "../Gates/sum_gates.h"
+
+
+using std::cout, std::endl;
+using std::string;
+using sum_gates::sum;
+using sum_gates::half_adder;
+
+
 
 
 /*
@@ -35,7 +48,12 @@ void tests::two_inputs_gate_test(string gate_name, bool(* gate) (bool, bool)){
  и одним логическим выходом  
  */
 
+
+/*
+Тестирование полусумматора
+*/
 void tests::one_input_gate_test(string gate_name, bool(* gate) (bool)){
+
 
     cout << "Start test of " << gate_name << " gate" << endl;
     const int bools_size = 2;
@@ -52,4 +70,14 @@ void tests::one_input_gate_test(string gate_name, bool(* gate) (bool)){
     }
 
     cout << "End test of " << gate_name << " gate" << endl << endl;
+}
+
+
+void tests::sum_test(bool input1, bool input2){
+
+    sum result = half_adder(input1, input2);
+
+    cout << "Input :" << input1 << ", " << input2 << endl;
+    cout << "Sum bit : " <<  result.sum << endl;
+    cout << "Carry out bit :" << result.carry_out << endl;
 }
